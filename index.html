@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="js/HTMLtable2chart/graficarBarras.js"></script>
+    <script type="text/javascript" src="js/HTMLtable2chart/tabla2array.js"></script>
+  
+
+    
+    
 </head>
 <body>
+    <div id='main'>
     <nav id="navbar">
-        <div id="logo">
-            <img src="images/logo.png" alt="logo" height="100px">
-        </div>
-
+        
         <ul>
             <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
             <li class="item"><a href="#">About Us</a></li>
             <li class="item"><a href="#">Contact Us</a></li>
             
@@ -23,10 +33,41 @@
 
     <section id="home">
         <h1 class="h1-primary">Welcome to aqua addicts</h1>
-        <p>Paragraph 1</p>
-        <p>Paragraph 2</p>
-        <button class="btn">Click</button>
+        <p>We have largest collection of all types of fish including betta, Guppies, RamaRozi, Tetras</p>
+        <p>Free Goodies and Discount coupons included with each shipped order.</p>
+        
     </section>
+</div>
+   
+    <button type="button" onclick="generatePDF()" id="btn1">Generate PDF</button>
+  
+
+   <div id="graph">
+    <table id="table" style="border:1px solid black;margin-left:auto;margin-right:auto;" >
+        <tr>
+          <th>Number</th>
+          <th>Percent</th>
+          
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>50</td>
+         </tr>
+         <tr>
+            <td>2</td>
+            <td>20</td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td>70</td>
+         </tr>
+      </table>
+      <div id="chartDiv" style="max-width: 740px;height: 400px;margin: 0px auto"></div>
+   </div>
+
+   
+    <button type="button" onclick="generateChart()" id="btn2">Generate Chart</button>
+ 
 
     
 </body>
