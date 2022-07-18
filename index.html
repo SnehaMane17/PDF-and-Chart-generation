@@ -10,9 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="js/HTMLtable2chart/graficarBarras.js"></script>
-    <script type="text/javascript" src="js/HTMLtable2chart/tabla2array.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   
 
     
@@ -41,9 +43,10 @@
    
     <button type="button" onclick="generatePDF()" id="btn1">Generate PDF</button>
   
-
-   <div id="graph">
-    <table id="table" style="border:1px solid black;margin-left:auto;margin-right:auto;" >
+    
+    <figure class="highcharts-figure">
+     <div id="container"></div>
+    <table id="datatable" style="border:1px solid black;margin-left:auto;margin-right:auto;" >
         <tr>
           <th>Number</th>
           <th>Percent</th>
@@ -62,11 +65,9 @@
             <td>70</td>
          </tr>
       </table>
-      <div id="chartDiv" style="max-width: 740px;height: 400px;margin: 0px auto"></div>
-   </div>
-
+    </figure>
    
-    <button type="button" onclick="generateChart()" id="btn2">Generate Chart</button>
+     <button type="button" onclick="generateChart()" id="btn2">Generate Chart</button>
  
 
     
